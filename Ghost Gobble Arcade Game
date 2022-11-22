@@ -57,7 +57,7 @@ def score(touching_power_pellet, touching_dot):
     """
     if touching_power_pellet == True or touching_dot == True:
         return True
-    else: 
+    else:
         return False
         
 def lose(power_pellet_active, touching_ghost):
@@ -86,6 +86,6 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
         if power_pellet_active == True:
             return True
         elif touching_ghost == True:
-                return False
+            return False
         else:
             return True
