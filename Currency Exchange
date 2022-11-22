@@ -116,7 +116,7 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :param denomination: int - the value of a single bill.
     :return: int - maximum value you can get.
     """
-    newrate = (exchange_rate+(spread/100))
+    newrate = (exchange_rate+(exchange_rate*(spread/100)))
     exchanged_amt = exchange_money(budget, newrate)
-    answer = int(exchanged_amt)//denomination
-    return(answer)
+    numbills = (int(exchanged_amt))//denomination
+    return(numbills*denomination)
